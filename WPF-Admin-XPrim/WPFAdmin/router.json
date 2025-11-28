@@ -1,0 +1,19 @@
+{
+  "Routers": [
+    {
+      "key": "监控界面",
+      "content": "监控界面",
+      "icon": "Visualization",
+      "page": "Home",
+      "LoginAuth": 5
+    },
+
+    {
+      "key": "用户管理",
+      "content": "用户管理",
+      "icon": "License",
+      "page": "SystemUser",
+      "LoginAuth": 1
+    }
+  ]
+}

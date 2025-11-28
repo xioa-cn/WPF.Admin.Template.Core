@@ -1,0 +1,64 @@
+{
+  "AppBaseOnName": "XIOA.WPF",
+  "AppCompanyName": "WPF.Template",
+  "AppName": "WPF.Template",
+  "Permission": "权限:",
+  "Admin": "超级管理员",
+  "Engineer": "工程师",
+  "Employee": "操作员",
+  "Logout": "退出登录",
+  "MiniIcon": "最小化到托盘",
+  "Close": "关闭程序",
+  "btn": {
+    "Confirm": "确认",
+    "Cancel": "取消",
+    "Yes": "是",
+    "No": "否",
+    "Save": "保存",
+    "Submit": "提交",
+    "Refresh": "刷新",
+    "Search": "搜索",
+    "TimeSearch":"时间查询",
+    "PageSize": "每页显示:",
+    "Add": "添加",
+    "AddUser": "添加用户",
+    "Edit": "编辑",
+    "Delete": "删除",
+    "Print": "打印",
+    "FirstPage": "首页",
+    "PreviousPage": "上一页",
+    "NextPage": "下一页",
+    "LastPage": "尾页",
+    "Write": "写 入",
+    "LookPlot": "查看曲线",
+    "Parameter": {
+      "Save": "保存本地",
+      "ReadLocal": "读取本地",
+      "DeleteLocal": "删除本地"
+    }
+  },
+  "SkipPage": {
+    "Page_Total": "页 / 共",
+    "Record_Total": "条记录",
+    "Page_General": "共",
+    "Page_Page": "页",
+    "Page_No": "第"
+  },
+  "Table": {
+    "Serial": "序号",
+    "DbSerial": "数据库序号",
+    "AlarmInfo": "报警信息",
+    "CreateTime": "创建时间",
+    "Type": "类型",
+    "ColumnName": "列名:",
+    "ColumnValue": "值:",
+    "Name": "名称",
+    "Password": "密码",
+    "Permission": "权限",
+    "Operation": "操作",
+    "Code": "条码",
+    "Result": "结果",
+    "AdditionalData": "附加数据"
+  }
+ 
+}
