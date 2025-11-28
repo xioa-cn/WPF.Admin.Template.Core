@@ -22,7 +22,5 @@
   "OpenExternalGrpc": false,
   "OpenAlarmLog": true,
   "IsRememberThePasswordToLogInAutomatically": true,
-  "AuthOutTime": "2025-12-20",
-  "OpenEnvelope": false,
-  "OpenFlitter": false
+  "AuthOutTime": "2025-12-20"
 }

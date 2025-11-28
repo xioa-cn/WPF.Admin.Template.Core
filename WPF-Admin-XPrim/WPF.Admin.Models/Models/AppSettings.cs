@@ -100,14 +100,6 @@ public class AppSettings {
     [Description("权限过期时间：")]
     public string AuthOutTime { get; set; }
 
-    [JsonPropertyName("OpenEnvelope")]
-    [Description("是否启用包络线：")]
-    public bool OpenEnvelope { get; set; }
-    
-    [JsonPropertyName("OpenFlitter")]
-    [Description("是否启用数据切割：")]
-    public bool OpenFlitter { get; set; }
-
     public static AppSettings? Default { get; set; }
 
     public static Action<string>? ActionSaveColor;
