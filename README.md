@@ -247,7 +247,7 @@ message MyResponse {
 }
 ```
 
-### 配置说明
+## 🌐 Garnet Server
 
 #### 应用配置
 在 `appConfigSettings.json` 中配置：
