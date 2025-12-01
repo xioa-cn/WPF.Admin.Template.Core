@@ -6,6 +6,7 @@ using WPF.Admin.Models.Db;
 using WPF.Admin.Models.Models;
 using WPF.Admin.Service.Logger;
 using WPF.Admin.Service.Services.Garnets;
+using WPF.Admin.Themes.CodeAuth;
 using WPF.Admin.Themes.Converter;
 using WPF.Admin.Themes.Themes;
 using WPFAdmin.Config;
@@ -17,6 +18,11 @@ namespace WPFAdmin;
 public partial class App {
     private void StartupWindow(Views.SplashScreen splashScreen,
         ApplicationStartupMode applicationStartupMode = ApplicationStartupMode.Normal) {
+
+        if (ApplicationCodeAuth.AuthTaskFlag)
+        {
+            return;
+        }
         var s = Enum.TryParse<IndexStatus>(Configs.Default?.IndexStatus, out var indexStatus);
         StartupGrpc();
         if (!s)

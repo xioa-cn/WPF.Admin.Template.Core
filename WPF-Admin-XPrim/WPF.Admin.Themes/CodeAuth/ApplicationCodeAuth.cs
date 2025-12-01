@@ -97,20 +97,21 @@ namespace WPF.Admin.Themes.CodeAuth
         }
 
 
-        public static void AuthTask()
+        public static void AuthTask(bool isOpen = false)
         {
             AuthTaskFlag = true;
             Task.Run(async () =>
             {
                 while (true)
                 {
-                    if ((DateTime.Now - StartTime).TotalHours >= ApplicationAuthModule._Interval - 0.5)
+                    if ((DateTime.Now - StartTime).TotalHours >= ApplicationAuthModule._Interval - 0.5 || isOpen)
                     {
                         Thread.Sleep(5000);
-                        DispatcherHelper.CheckBeginInvokeOnUI(() =>
-                        {
-                            Growl.ErrorGlobal("体验时间限制到期！！ 请申请正式版软件 或 添加激活码");
-                        });
+                        if (!isOpen)
+                            DispatcherHelper.CheckBeginInvokeOnUI(() =>
+                            {
+                                Growl.ErrorGlobal("体验时间限制到期！！ 请申请正式版软件 或 添加激活码");
+                            });
                         await AuthMethod();
                     }
 
@@ -194,7 +195,7 @@ namespace WPF.Admin.Themes.CodeAuth
                     if (!System.IO.File.Exists(authPathFile))
                     {
                         Growl.ErrorGlobal("系统时间可能被篡改！ 软件授权加密被开启");
-                        Task.Run(AuthMethod);
+                        AuthTask(true);
                     }
 
                     authcode = System.IO.File.ReadAllText(
@@ -211,7 +212,7 @@ namespace WPF.Admin.Themes.CodeAuth
                     else
                     {
                         Growl.ErrorGlobal("系统时间可能被篡改！ 软件授权加密被开启");
-                        Task.Run(AuthMethod);
+                        AuthTask(true);
                     }
                 }
 
